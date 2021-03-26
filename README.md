@@ -9,5 +9,5 @@
 mv gecodriver usr/local/bin
 
 Для виндовс и Google Chrome достаточно указать путь к драйверу
-driver = webdriver.Chrome('path to driver')\n
+driver = webdriver.Chrome('path to driver')
 Пожелания и замечания телеграм: @python_art
