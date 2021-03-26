@@ -1,0 +1,18 @@
+1616782920999	geckodriver	INFO	Listening on 127.0.0.1:51783
+1616782921028	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileDTyzaP"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.error: services.settings: 
+  main/fxmonitor-breaches Signature failed  TypeError: NetworkError when attempting to fetch resource.
+1616782925511	Marionette	INFO	Listening on port 37975
+1616782925605	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://web.whatsapp.com/bootstrap_qr.0cba307535272c096f3c.js, line 1: unreachable code after return statement
+JavaScript warning: https://web.whatsapp.com/bootstrap_qr.0cba307535272c096f3c.js, line 1: unreachable code after return statement
+1616782998849	geckodriver	INFO	Listening on 127.0.0.1:44909
+1616782998858	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilejwA0Ow"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1616783002686	Marionette	INFO	Listening on port 36183
+1616783002987	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://web.whatsapp.com/bootstrap_qr.8c6bd07fd55e4b8fbdb7.js, line 1: unreachable code after return statement
+JavaScript warning: https://web.whatsapp.com/bootstrap_qr.8c6bd07fd55e4b8fbdb7.js, line 1: unreachable code after return statement
+JavaScript error: https://start.fedoraproject.org/, line 292: TypeError: $(...).uls is not a function
+1616783014587	Marionette	INFO	Stopped listening on port 36183

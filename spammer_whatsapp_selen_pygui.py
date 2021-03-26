@@ -8,8 +8,8 @@ import re
 # TODO: допилить корректный преобразователь номеров телефонов.
 # TODO: устранить проблему с переполнением вкладок
 
-driver = webdriver.Chrome()
-driver.get('https://web.whatsapp.com/send?phone=79656115280')
+driver = webdriver.Firefox()
+driver.get('https://web.whatsapp.com/')
 input('Введите QR код и нажмите ENTER')
 
 lists = []
