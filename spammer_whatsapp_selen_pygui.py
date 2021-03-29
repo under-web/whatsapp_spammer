@@ -4,7 +4,7 @@ import pyautogui
 import random
 
 
-
+# v.2.0
 # ============================
 # Прототип рассылки в вотсап #
 # ============================
@@ -30,41 +30,43 @@ def run_spammer(set_phone):
     for phone in set_phone:
         print(phone, 'В списке №{} из {}'.format(step, all_phone))
         step += 1
+        if step % 50 == 0: # если делится без остатка на 50 пауза 15 мин
+            time.sleep(900)
+        else:
+            try:
+                driver.execute_script("window.open('https://web.whatsapp.com/send?phone={}')".format(phone.strip()))
+            except Exception as e:
+                print('ошибка с урл', e)
+                continue
 
-        try:
-            driver.execute_script("window.open('https://web.whatsapp.com/send?phone={}')".format(phone.strip()))
-        except Exception as e:
-            print('ошибка с урл', e)
-            continue
+            try:
+                time.sleep(random.randint(5, 10))
 
-        try:
-            time.sleep(random.randint(5, 10))
+                driver.switch_to.window(driver.window_handles[-1])
+                txt = "Доброго времени суток! 🔥Горячая тема в 21 году: Видео-магнит, как доход для частника и крупного бизнеса, НЕ ФРАНШИЗА, " \
+                      "Для собственников, Отелей, Сувенирных лавок, Музеев и Театров, Так же для, Музыкантов, Блогеров, " \
+                      "Пиарщиков,Magic-Magnet.ru, Вы можете хорошо заработать! Присоединяйтесь."
 
-            driver.switch_to.window(driver.window_handles[-1])
-            txt = "Доброго времени суток! 🔥Горячая тема в 21 году: Видео-магнит, как доход для частника и крупного бизнеса, НЕ ФРАНШИЗА, " \
-                  "Для собственников, Отелей, Сувенирных лавок, Музеев и Театров, Так же для, Музыкантов, Блогеров, " \
-                  "Пиарщиков,Magic-Magnet.ru, Вы можете хорошо заработать! Присоединяйтесь."
+                # print(driver.window_handles)
+                msg_box = driver.find_elements_by_class_name('_2_1wd')  # находим бокс куда вставлять сообщение
+                msg_box[1].send_keys(txt)  # вставляем нужный текст
+                time.sleep(random.randint(3, 5))
 
-            # print(driver.window_handles)
-            msg_box = driver.find_elements_by_class_name('_2_1wd')  # находим бокс куда вставлять сообщение
-            msg_box[1].send_keys(txt)  # вставляем нужный текст
-            time.sleep(random.randint(3, 5))
+                button = driver.find_element_by_class_name('_1E0Oz')  # находим кнопку
+                button.click()  # кликаем по ней
+                print('Отправил')
 
-            button = driver.find_element_by_class_name('_1E0Oz')  # находим кнопку
-            button.click()  # кликаем по ней
-            print('Отправил')
+                time.sleep(random.randint(30, 60))
+                if len(driver.window_handles) >= 2:
+                    pyautogui.moveTo(206, 56, 1)
+                    pyautogui.click()
+                    time.sleep(2)
 
-            time.sleep(random.randint(30, 60))
-            if len(driver.window_handles) >= 2:
+            except Exception as ero:
+                print('Что то пошло не так', ero)
                 pyautogui.moveTo(206, 56, 1)
                 pyautogui.click()
-                time.sleep(2)
-
-        except Exception as ero:
-            print('Что то пошло не так', ero)
-            pyautogui.moveTo(206, 56, 1)
-            pyautogui.click()
-            time.sleep(random.randint(30, 60))
+                time.sleep(random.randint(30, 60))
 
 
 def main():
