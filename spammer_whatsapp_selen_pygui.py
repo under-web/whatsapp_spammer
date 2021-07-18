@@ -1,6 +1,5 @@
 from selenium import webdriver
 import time
-import pyautogui
 import random
 
 
@@ -11,18 +10,17 @@ import random
 
 
 def get_phone():
-    with open('Юла телефоны.txt', 'r') as file:                     # место с телефонами
+    with open(r'T:\Desktop\tg700.txt', 'r') as file:                     # место с телефонами
         phones = file.readlines()
         set_phone = set(phones)
     return set_phone
 
-
+# TODO: сделать скрытой отправку сообщений
 def run_spammer(set_phone):
     driver = webdriver.Firefox()
     driver.get(r'https://web.whatsapp.com/send?phone=79656115280')  # стартовая страница не важно какой номер здесь
     time.sleep(6)
-    print(pyautogui.position())                                     # определение позиции курсора
-    input('Введите QR код и нажмите ENTER')                         # c этого момента мышь не трогать
+    input('Введите QR код и нажмите ENTER')
 
     step = 1
     all_phone = len(set_phone)
@@ -46,7 +44,7 @@ def run_spammer(set_phone):
                 driver.switch_to.window(driver.window_handles[-1])
 
 
-                # print(driver.window_handles)
+
                 msg_box = driver.find_elements_by_class_name('_2_1wd')  # находим бокс куда вставлять сообщение
                 msg_box[1].send_keys(random.choice(txt))  # вставляем нужный текст выбрав рандомно из списка
                 time.sleep(random.randint(3, 5))
@@ -58,16 +56,10 @@ def run_spammer(set_phone):
                 print('Отправил')
 
                 time.sleep(random.randint(45, 80))
-                if len(driver.window_handles) >= 2:
-                    pyautogui.moveTo(206, 56, 1)
-                    pyautogui.click()
-                    time.sleep(2)
 
             except Exception as ero:
                 print('Что то пошло не так', ero)
-                pyautogui.moveTo(206, 56, 1)
-                pyautogui.click()
-                time.sleep(random.randint(45, 80))
+
 
 
 def main():

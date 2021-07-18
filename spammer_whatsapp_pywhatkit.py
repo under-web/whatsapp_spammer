@@ -2,7 +2,7 @@ import pywhatkit
 import time
 import re
 
-# отправка на вотсап в определенное время
+# отправка на вотсап в определенное время cо сторонней библиотеки pywhatkit
 
 # hour = int(time.ctime()[11:13])
 # minut = int(time.ctime()[14:16])
