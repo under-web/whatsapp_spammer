@@ -8,3 +8,19 @@ JavaScript warning: https://web.whatsapp.com/bootstrap_qr.4b9c044a48c9fc5005b0.j
 JavaScript warning: https://web.whatsapp.com/bootstrap_qr.4b9c044a48c9fc5005b0.js, line 19: unreachable code after return statement
 [Parent 1904, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
 1626624980153	Marionette	INFO	Stopped listening on port 65122
+1626723994406	geckodriver	INFO	Listening on 127.0.0.1:55715
+1626723997442	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Seneka\\AppData\\Local\\Temp\\rust_mozprofileKGqvnF"
+1626724004115	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Seneka\\AppData\\Local\\Temp\\rust_mozprofileKGqvnF\\search.json.mozlz4", (void 0)))
+1626724015080	Marionette	INFO	Listening on port 55723
+1626724015330	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://web.whatsapp.com/bootstrap_qr.4b9c044a48c9fc5005b0.js, line 19: unreachable code after return statement
+JavaScript warning: https://web.whatsapp.com/bootstrap_qr.4b9c044a48c9fc5005b0.js, line 19: unreachable code after return statement
+1626724363244	geckodriver	INFO	Listening on 127.0.0.1:55849
+1626724366280	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Seneka\\AppData\\Local\\Temp\\rust_mozprofile8eRMsS"
+1626724367550	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Seneka\\AppData\\Local\\Temp\\rust_mozprofile8eRMsS\\search.json.mozlz4", (void 0)))
+1626724373451	Marionette	INFO	Listening on port 55857
+1626724374617	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://web.whatsapp.com/bootstrap_qr.4b9c044a48c9fc5005b0.js, line 19: unreachable code after return statement
+JavaScript warning: https://web.whatsapp.com/bootstrap_qr.4b9c044a48c9fc5005b0.js, line 19: unreachable code after return statement
