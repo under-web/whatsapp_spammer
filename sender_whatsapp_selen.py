@@ -1,62 +1,105 @@
-from selenium import webdriver
 import time
 import random
+from selenium.webdriver.common.by import By
+from selenium import webdriver
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+
+driver = webdriver.Chrome()
+
 
 # TODO: сделать скрытой отправку сообщений
-def send_message():
-    driver = webdriver.Chrome()
+# TODO: вместо повторения функции close_book
+
+def close_book(need_book=3): # Количество вкладок в вирт браузере не более (N)
+    """
+    Функция закрывает первую вкладку если выполняется условие
+    :param book:
+    :return:
+    """
+    all_books = len(driver.window_handles)
+    if all_books >= need_book:
+        driver.switch_to.window(driver.window_handles[0])
+        driver.close()
+        time.sleep(5)
+    else:
+        print(f'Сейчас {all_books} вкладок')
+
+
+def get_phone_lists(rand=True):
+    """
+    Собирает телефоны из файла и рандомизирует их
+    :return: random list
+    """
+    with open(r'T:\Desktop\tg700.txt', 'r', encoding='utf-8') as file:
+        norm_phones = file.readlines()
+        if rand:
+            rand_all_phones = random.sample(norm_phones, len(norm_phones))
+            return rand_all_phones
+        else:
+            return norm_phones
+
+def get_message():
+    """
+    Берет случайную строчку из файла и подставляет ее в сообщение
+    :return: txt
+    """
+    with open('messages.txt', 'r', encoding='utf-8') as files:  # открываем файл с сообщениями
+        txt = files.readlines()  # считываем его в список
+        return txt
+
+
+def send_message(txt, any_phones):
     driver.get(r'https://web.whatsapp.com/send?phone=79656115280')  # стартовая страница не важно какой номер здесь
 
     input('Введите QR код и нажмите ENTER')
-    print('Жду')
     time.sleep(6)
-    print('go')
-    step = 1
-    with open(r'T:\Desktop\tg700.txt', 'r', encoding='utf-8') as file_phone:
-        for phone in file_phone.readlines():
-            print(phone, f'Отправляю сообщение на {step} из')
-            try:
-                driver.execute_script("window.open('https://web.whatsapp.com/send?phone={}')".format(phone.strip()))
-            except Exception as e:
-                print('ошибка с урл', e)
-                continue
+    print(f'Всего телефонов {len(any_phones)}')
+    for phone in any_phones:
+        try:
+            driver.switch_to.window(driver.window_handles[-1])
+            driver.execute_script("window.open('https://web.whatsapp.com/send?phone={}')".format(phone.strip()))
+        except Exception as e:
+            print('ошибка с урл', e)
+            driver.switch_to.window(driver.window_handles[-1])
+            driver.close()
+            continue
 
-            try:
-                time.sleep(random.randint(5, 10))
+        time.sleep(random.randint(5, 10))
+        # driver.switch_to.window(driver.window_handles[-1])
 
-                with open('messages.txt', 'r') as files:  # открываем файл с сообщениями
-                    txt = files.readlines()  # считываем его в список
-                try:
-                    driver.switch_to.window(driver.window_handles[-1])
-                except Exception as r:
-                    print(r)
-                msg_box = driver.find_element_by_class_name('_1SEvr')  # находим бокс куда вставлять сообщение
-                print('нашел msg_box')
-                time.sleep(2)
-                try:
-                    msg_box.send_keys(random.choice(txt))  # вставляем нужный текст выбрав рандомно из списка
-                    print('отправил на msg_box')
-                except Exception as ms:
-                    print('Не смог вставить текст', ms)
-                    time.sleep(5)
+        try:
+            wait = WebDriverWait(driver, 10)
+            msg_box = wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="main"]/footer/div[1]/div['
+                                                                       '2]/div/div[1]/div')))  # находим бокс
+            print('Нашел msg_box')
+        except Exception as e:
+            print('Не нашел msg_box')
+            close_book()
+            continue
+        try:
+            msg_box.send_keys(random.choice(txt))  # вставляем нужный текст выбрав рандомно из списка
+            print('отправил на msg_box')
+            time.sleep(5)
+        except Exception as ms:
+            print('Не смог вставить текст', ms)
+            time.sleep(5)
+            continue
 
-                time.sleep(random.randint(3, 5))
-
-                button = driver.find_element_by_class_name('_1E0Oz')  # находим кнопку
-                time.sleep(1)
-                button.click()  # кликаем по ней
-                time.sleep(2)
-                print('Отправил')
-
-                time.sleep(random.randint(45, 80))
-
-            except Exception as ero:
-                print('Что то пошло не так', ero)
-
+        time.sleep(random.randint(3, 5))
+        try:
+            button = driver.find_element_by_class_name('_4sWnG')  # находим кнопку
+            time.sleep(1)
+            button.click()  # кликаем по ней
+            close_book()
+        except Exception as r:
+            print('Нет стрелочки')
+            close_book()
+            time.sleep(random.randint(15, 30))
 
 
 def main():
-    send_message()
+    send_message(get_message(), get_phone_lists())
 
 
 if __name__ == '__main__':
