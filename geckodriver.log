@@ -24,3 +24,80 @@ console.warn: SearchSettings: "get: No settings file exists, new profile?" (new 
 1626724374617	Marionette	WARN	TLS certificate errors will be ignored for this session
 JavaScript warning: https://web.whatsapp.com/bootstrap_qr.4b9c044a48c9fc5005b0.js, line 19: unreachable code after return statement
 JavaScript warning: https://web.whatsapp.com/bootstrap_qr.4b9c044a48c9fc5005b0.js, line 19: unreachable code after return statement
+1626724494299	geckodriver	INFO	Listening on 127.0.0.1:55977
+1626724497333	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Seneka\\AppData\\Local\\Temp\\rust_mozprofile94TE0h"
+1626724498610	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Seneka\\AppData\\Local\\Temp\\rust_mozprofile94TE0h\\search.json.mozlz4", (void 0)))
+1626724504464	Marionette	INFO	Listening on port 55985
+1626724504970	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://web.whatsapp.com/bootstrap_qr.4b9c044a48c9fc5005b0.js, line 19: unreachable code after return statement
+JavaScript warning: https://web.whatsapp.com/bootstrap_qr.4b9c044a48c9fc5005b0.js, line 19: unreachable code after return statement
+1626758320481	geckodriver	INFO	Listening on 127.0.0.1:50072
+1626758323907	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Seneka\\AppData\\Local\\Temp\\rust_mozprofilehDbqMh"
+1626758331175	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Seneka\\AppData\\Local\\Temp\\rust_mozprofilehDbqMh\\search.json.mozlz4", (void 0)))
+1626758343890	Marionette	INFO	Listening on port 50080
+1626758344201	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://web.whatsapp.com/bootstrap_qr.e715964683fa904d24c6.js, line 19: unreachable code after return statement
+JavaScript warning: https://web.whatsapp.com/bootstrap_qr.e715964683fa904d24c6.js, line 19: unreachable code after return statement
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x680008,name=PMessagePort::Msg___delete__) Channel error: cannot send/recv
+
+1626758475981	geckodriver	INFO	Listening on 127.0.0.1:50231
+1626758479022	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Seneka\\AppData\\Local\\Temp\\rust_mozprofile0nfll9"
+1626758480322	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Seneka\\AppData\\Local\\Temp\\rust_mozprofile0nfll9\\search.json.mozlz4", (void 0)))
+1626758486255	Marionette	INFO	Listening on port 50239
+1626758487392	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://web.whatsapp.com/bootstrap_qr.4b9c044a48c9fc5005b0.js, line 19: unreachable code after return statement
+JavaScript warning: https://web.whatsapp.com/bootstrap_qr.4b9c044a48c9fc5005b0.js, line 19: unreachable code after return statement
+JavaScript warning: https://web.whatsapp.com/bootstrap_qr.e715964683fa904d24c6.js, line 19: unreachable code after return statement
+JavaScript warning: https://web.whatsapp.com/bootstrap_qr.e715964683fa904d24c6.js, line 19: unreachable code after return statement
+JavaScript warning: https://web.whatsapp.com/bootstrap_qr.4b9c044a48c9fc5005b0.js, line 19: unreachable code after return statement
+JavaScript warning: https://web.whatsapp.com/bootstrap_qr.4b9c044a48c9fc5005b0.js, line 19: unreachable code after return statement
+1626758594152	geckodriver	INFO	Listening on 127.0.0.1:50356
+1626758597188	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Seneka\\AppData\\Local\\Temp\\rust_mozprofile9dZtVy"
+1626758598403	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Seneka\\AppData\\Local\\Temp\\rust_mozprofile9dZtVy\\search.json.mozlz4", (void 0)))
+1626758604162	Marionette	INFO	Listening on port 50364
+1626758605017	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://web.whatsapp.com/bootstrap_qr.e715964683fa904d24c6.js, line 19: unreachable code after return statement
+JavaScript warning: https://web.whatsapp.com/bootstrap_qr.e715964683fa904d24c6.js, line 19: unreachable code after return statement
+1626758672065	geckodriver	INFO	Listening on 127.0.0.1:50492
+1626758675108	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Seneka\\AppData\\Local\\Temp\\rust_mozprofilee8Cfzb"
+1626758676468	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Seneka\\AppData\\Local\\Temp\\rust_mozprofilee8Cfzb\\search.json.mozlz4", (void 0)))
+1626758681829	Marionette	INFO	Listening on port 50500
+1626758682940	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://web.whatsapp.com/bootstrap_qr.e715964683fa904d24c6.js, line 19: unreachable code after return statement
+JavaScript warning: https://web.whatsapp.com/bootstrap_qr.e715964683fa904d24c6.js, line 19: unreachable code after return statement
+JavaScript warning: https://web.whatsapp.com/bootstrap_qr.4b9c044a48c9fc5005b0.js, line 19: unreachable code after return statement
+JavaScript warning: https://web.whatsapp.com/bootstrap_qr.4b9c044a48c9fc5005b0.js, line 19: unreachable code after return statement
+1626758935562	geckodriver	INFO	Listening on 127.0.0.1:52653
+1626758938599	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Seneka\\AppData\\Local\\Temp\\rust_mozprofilew4mpXR"
+1626758939759	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Seneka\\AppData\\Local\\Temp\\rust_mozprofilew4mpXR\\search.json.mozlz4", (void 0)))
+1626758945285	Marionette	INFO	Listening on port 52661
+1626758945931	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://web.whatsapp.com/bootstrap_qr.4b9c044a48c9fc5005b0.js, line 19: unreachable code after return statement
+JavaScript warning: https://web.whatsapp.com/bootstrap_qr.4b9c044a48c9fc5005b0.js, line 19: unreachable code after return statement
+JavaScript warning: https://web.whatsapp.com/bootstrap_qr.4b9c044a48c9fc5005b0.js, line 19: unreachable code after return statement
+JavaScript warning: https://web.whatsapp.com/bootstrap_qr.4b9c044a48c9fc5005b0.js, line 19: unreachable code after return statement
+JavaScript warning: https://web.whatsapp.com/bootstrap_qr.e715964683fa904d24c6.js, line 19: unreachable code after return statement
+JavaScript warning: https://web.whatsapp.com/bootstrap_qr.e715964683fa904d24c6.js, line 19: unreachable code after return statement
+1626759225948	geckodriver	INFO	Listening on 127.0.0.1:52779
+1626759228983	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Seneka\\AppData\\Local\\Temp\\rust_mozprofileJkJW0U"
+1626759230223	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Seneka\\AppData\\Local\\Temp\\rust_mozprofileJkJW0U\\search.json.mozlz4", (void 0)))
+1626759235732	Marionette	INFO	Listening on port 52787
+1626759236814	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://web.whatsapp.com/bootstrap_qr.4b9c044a48c9fc5005b0.js, line 19: unreachable code after return statement
+JavaScript warning: https://web.whatsapp.com/bootstrap_qr.4b9c044a48c9fc5005b0.js, line 19: unreachable code after return statement
+JavaScript warning: https://web.whatsapp.com/bootstrap_qr.e715964683fa904d24c6.js, line 19: unreachable code after return statement
+JavaScript warning: https://web.whatsapp.com/bootstrap_qr.e715964683fa904d24c6.js, line 19: unreachable code after return statement
+JavaScript warning: https://web.whatsapp.com/bootstrap_qr.e715964683fa904d24c6.js, line 19: unreachable code after return statement
+JavaScript warning: https://web.whatsapp.com/bootstrap_qr.e715964683fa904d24c6.js, line 19: unreachable code after return statement
+JavaScript warning: https://web.whatsapp.com/bootstrap_qr.4b9c044a48c9fc5005b0.js, line 19: unreachable code after return statement
+JavaScript warning: https://web.whatsapp.com/bootstrap_qr.4b9c044a48c9fc5005b0.js, line 19: unreachable code after return statement
+JavaScript warning: https://web.whatsapp.com/bootstrap_qr.4b9c044a48c9fc5005b0.js, line 19: unreachable code after return statement
+JavaScript warning: https://web.whatsapp.com/bootstrap_qr.4b9c044a48c9fc5005b0.js, line 19: unreachable code after return statement
