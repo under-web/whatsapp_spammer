@@ -5,11 +5,10 @@ from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
+
 driver = webdriver.Chrome()
 
-
-# TODO: сделать скрытой отправку сообщений
-# TODO: вместо повторения функции close_book
+# TODO: вместо повторения функции close_book написать цикл с закрытием лишних вкладок если их больше чем нужно
 
 def close_book(need_book=3): # Количество вкладок в вирт браузере не более (N)
     """
@@ -66,24 +65,18 @@ def send_message(txt, any_phones):
             continue
 
         time.sleep(random.randint(5, 10))
-        # driver.switch_to.window(driver.window_handles[-1])
+        driver.switch_to.window(driver.window_handles[-1])
 
         try:
             wait = WebDriverWait(driver, 10)
-            msg_box = wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="main"]/footer/div[1]/div['
-                                                                       '2]/div/div[1]/div')))  # находим бокс
-            print('Нашел msg_box')
+            msg_box = wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="main"]/footer/div[1]/div[2]/div/div[1]/div')))
+            time.sleep(3)
+            msg_box.send_keys(random.choice(txt).strip())  # вставляем нужный текст выбрав рандомно из списка
+            print('Отправил текст в msg_box')
+
         except Exception as e:
             print('Не нашел msg_box')
             close_book()
-            continue
-        try:
-            msg_box.send_keys(random.choice(txt))  # вставляем нужный текст выбрав рандомно из списка
-            print('отправил на msg_box')
-            time.sleep(5)
-        except Exception as ms:
-            print('Не смог вставить текст', ms)
-            time.sleep(5)
             continue
 
         time.sleep(random.randint(3, 5))
